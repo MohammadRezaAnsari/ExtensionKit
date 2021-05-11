@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-extension UIView {
+public extension UIView {
     
     func addConstarint(
         top: NSLayoutYAxisAnchor?,
