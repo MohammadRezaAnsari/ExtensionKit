@@ -1,5 +1,5 @@
 //
-//  UIImage+Tint.swift
+//  UIImage+TintColor.swift
 //  
 //
 //  Created by Mahshid Sharif on 5/18/21.
@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIImage {
-    public func image(withTintColor color: UIColor) -> UIImage {
+   public func withTintColor(_ color: UIColor) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         let context: CGContext = UIGraphicsGetCurrentContext()!
         context.translateBy(x: 0, y: size.height)
@@ -18,8 +18,8 @@ extension UIImage {
         context.clip(to: rect, mask: cgImage!)
         color.setFill()
         context.fill(rect)
-        let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        return newImage
+        return image
     }
 }

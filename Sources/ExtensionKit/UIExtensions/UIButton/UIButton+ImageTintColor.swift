@@ -8,10 +8,10 @@
 import UIKit
 
 extension UIButton {
-    func setImageTintColor(_ color: UIColor, for state: UIControl.State) {
+   public func setImageTintColor(_ color: UIColor, for state: UIControl.State) {
         if let imageForState = image(for: state) {
             image(for: .normal)?.withRenderingMode(.alwaysTemplate)
-            let colorizedImage = imageForState.image(withTintColor: color)
+            let colorizedImage = imageForState.withTintColor(color)
             setImage(colorizedImage, for: state)
         }
     }
