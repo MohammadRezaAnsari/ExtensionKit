@@ -8,15 +8,18 @@
 import Foundation
 
 public protocol Separation {
+    static var separationFormatter: NumberFormatter { get }
     func separated() -> String
 }
 
 // MARK: - Numerical types of supported Separation
 extension Int: Separation {}
-extension Double: Separation {}
-extension NSNumber: Separation {}
 
 // MARK: - Implementation
+public extension Int {
+    static let separationFormatter = NumberFormatter()
+}
+    
 public extension Separation {
     
     /**
@@ -29,11 +32,10 @@ public extension Separation {
      - Warning: Be aware of number formatter performance cost.
      */
     func separated() -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 8
-        formatter.roundingMode = .down
-        let formatted = formatter.string(for: self)
+        Self.separationFormatter.numberStyle = .decimal
+        Self.separationFormatter.maximumFractionDigits = 8
+        Self.separationFormatter.roundingMode = .down
+        let formatted = Self.separationFormatter.string(for: self)
         return formatted ?? "\(self)"
     }
 }
