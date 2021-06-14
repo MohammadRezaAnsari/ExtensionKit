@@ -12,9 +12,13 @@ public extension UIViewController {
     func endEditingByTap() {
         let gestureName = "End editing tap gesture recognizer"
         guard !(view.gestureRecognizers?.contains(where: { $0.name == gestureName }) ?? false ) else { return }
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(view.endEditing(_:)))
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         gesture.cancelsTouchesInView = false
         gesture.name = gestureName
         view.addGestureRecognizer(gesture)
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
