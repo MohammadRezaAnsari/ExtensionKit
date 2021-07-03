@@ -7,7 +7,7 @@
 import UIKit
 
 extension UIColor {
-    func mix(with color: UIColor, amount: CGFloat) -> Self {
+    public func mix(with color: UIColor, amount: CGFloat) -> Self {
         var red1: CGFloat = 0
         var green1: CGFloat = 0
         var blue1: CGFloat = 0
@@ -29,6 +29,6 @@ extension UIColor {
         )
     }
 
-    func lighter(by amount: CGFloat = 0.2) -> Self { mix(with: .white, amount: amount) }
-    func darker(by amount: CGFloat = 0.2) -> Self { mix(with: .black, amount: amount) }
+    public func lighter(by amount: CGFloat = 0.2) -> Self { mix(with: .white, amount: amount) }
+    public func darker(by amount: CGFloat = 0.2) -> Self { mix(with: .black, amount: amount) }
 }
