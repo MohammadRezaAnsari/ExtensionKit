@@ -14,9 +14,19 @@ public protocol Separation {
 
 // MARK: - Numerical types of supported Separation
 extension Int: Separation {}
+extension Double: Separation {}
+extension NSNumber: Separation {}
 
 // MARK: - Implementation
 public extension Int {
+    static let separationFormatter = NumberFormatter()
+}
+
+public extension Double {
+    static let separationFormatter = NumberFormatter()
+}
+
+public extension NSNumber {
     static let separationFormatter = NumberFormatter()
 }
     
