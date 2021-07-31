@@ -8,7 +8,13 @@
 import UIKit
 
 extension UIImage {
-   public func withTintColor(_ color: UIColor) -> UIImage {
+    
+    public func tintColor(_ color: UIColor) -> UIImage {
+        if #available(iOS 13.0, *) {
+            assertionFailure("")
+            return self
+        }
+        
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         let context: CGContext = UIGraphicsGetCurrentContext()!
         context.translateBy(x: 0, y: size.height)
