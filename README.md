@@ -7,6 +7,8 @@
 [![MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
 
+A collection of useful extensions for the Swift Standard Library, Foundation, and UIKit.
+
 ## Requirements
 
 - **iOS** 9.0+ 
