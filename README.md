@@ -39,7 +39,7 @@ let package = Package(
             targets: ["YourPackage"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/MohammadRezaAnsari/ExtensionKit", from: "1.5.0"),
+        .package(url: "https://github.com/MohammadRezaAnsari/ExtensionKit", from: "1.6.0"),
     ],
     targets: [
         .target(
