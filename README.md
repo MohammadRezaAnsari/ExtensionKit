@@ -17,29 +17,34 @@ A collection of useful extensions for the Swift Standard Library, Foundation, an
 
 ## Installation
 
-<details>
-<summary>Swift Package Manager</summary>
-</br>
-<p>You can use <a href="https://swift.org/package-manager">The Swift Package Manager</a> to install <code>ExtensionKit</code> by adding the proper description to your <code>Package.swift</code> file:</p>
+You can use `The Swift Package Manager` to install `SocketKit` by adding the proper description to your
 
-<pre><code class="swift language-swift">import PackageDescription
+Once you have your Swift package set up, adding `SocketKit` as a dependency is as easy as adding it to the dependencies value of your Package.swift.
+
+```bash
+https://github.com/MohammadRezaAnsari/ExtensionKit
+```
+
+Alternatively, you can add SocketKit as a dependency in your `Package.swift` file. For example:
+
+```swift
+// swift-tools-version:5.1
+import PackageDescription
 
 let package = Package(
-    name: "PROJECT_NAME",
-    targets: [],
+    name: "PackageName",
+    products: [
+        .library(
+            name: "PackageName",
+            targets: ["YourPackage"]),
+    ],
     dependencies: [
-        .package(url: "https://github.com/MohammadRezaAnsari/ExtensionKit", from: "1.4.0")
+        .package(url: "https://github.com/MohammadRezaAnsari/ExtensionKit", from: "1.5.0"),
+    ],
+    targets: [
+        .target(
+            name: "PackageName",
+            dependencies: ["ExtensionKit"]),
     ]
 )
-</code></pre>
-
-<p>Next, add <code>ExtensionKit</code> to your targets dependencies like so:</p>
-<pre><code class="swift language-swift">.target(
-    name: "TARGET_NAME",
-    dependencies: [
-        "ExtensionKit",
-    ]
-),</code></pre>
-<p>Then run <code>swift package update</code>.</p>
-
-</details>
+```
