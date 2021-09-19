@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension String {
+public extension String {
     func withLineSpacing(_ spacing: CGFloat) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: self)
         let paragraphStyle = NSMutableParagraphStyle()
