@@ -20,7 +20,7 @@ public extension UIViewController {
             guard !((view.gestureRecognizers?.contains(where: { $0 == gesture })  ?? false)) else { return }
         }
         
-        gesture.cancelsTouchesInView = false
+        gesture.cancelsTouchesInView = true
         view.addGestureRecognizer(gesture)
     }
     
