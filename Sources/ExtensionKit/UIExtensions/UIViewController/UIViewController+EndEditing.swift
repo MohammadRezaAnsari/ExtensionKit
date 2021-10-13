@@ -9,7 +9,7 @@ import UIKit
 
 public extension UIViewController {
     
-    func endEditingByTap() {
+    func endEditingByTap(_ cancelsTouchesInView: Bool = false) {
         let gestureName = "End editing tap gesture recognizer"
         let gesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         
@@ -20,7 +20,7 @@ public extension UIViewController {
             guard !((view.gestureRecognizers?.contains(where: { $0 == gesture })  ?? false)) else { return }
         }
         
-        gesture.cancelsTouchesInView = true
+        gesture.cancelsTouchesInView = cancelsTouchesInView
         view.addGestureRecognizer(gesture)
     }
     
