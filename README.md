@@ -3,7 +3,7 @@
 [![Platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)](https://github.com/MohammadRezaAnsari/ExtensionKit)
 [![SPM compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
 [![Swift](https://img.shields.io/badge/Swift-5.3-orange.svg)](https://swift.org)
-[![Xcode](https://img.shields.io/badge/Xcode-12.4-blue.svg)](https://developer.apple.com/xcode)
+[![Xcode](https://img.shields.io/badge/Xcode-13.0-blue.svg)](https://developer.apple.com/xcode)
 [![MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -12,7 +12,7 @@ A collection of useful extensions for the Swift Standard Library, Foundation, an
 ## Requirements
 
 - **iOS** 9.0+ 
-- Swift 5.0+
+- **Swift** 5.0+
 
 
 ## Installation
@@ -48,3 +48,6 @@ let package = Package(
     ]
 )
 ```
+
+## Contributors
+The complete list of people who contributed to this project is available [here](https://github.com/MohammadRezaAnsari/ExtensionKit/graphs/contributors). ExtensionKit wouldn't be what it is without you! Thank you very much! 🙏
