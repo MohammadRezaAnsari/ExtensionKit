@@ -10,16 +10,7 @@ jobs:
   build:
 
     runs-on: macos-latest
-    strategy:
-      matrix:
-        destination: ["OS=14.5,name=iPhone 12 Pro"]   
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: swift build -v
-      env: 
-         destination: ${{ matrix.destination }}
-    - name: Run tests
-      run: swift test -v
-      env: 
-         destination: ${{ matrix.destination }}
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme IndexedDataStore -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
