@@ -12,7 +12,7 @@ jobs:
     runs-on: macos-latest
     strategy:
        matrix:
-         destination: ["OS=14.5,name=iPhone 12 Pro"] 
+         destination: ["OS=14.4,name=iPhone 12 Pro"] 
     steps:
     - uses: actions/checkout@v2
     - name: Build
