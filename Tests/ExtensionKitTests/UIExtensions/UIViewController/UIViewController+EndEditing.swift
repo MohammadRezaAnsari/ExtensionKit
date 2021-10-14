@@ -23,6 +23,7 @@ final class UIViewController_EndEditingTests: XCTestCase {
         viewController = nil
     }
     
+    @available(iOS 11.0, *)
     func testEndEditingAddGestureToView() {
         viewController.endEditingByTap()
         XCTAssertNotNil(viewController.view.gestureRecognizers)
@@ -40,6 +41,7 @@ final class UIViewController_EndEditingTests: XCTestCase {
         XCTAssertEqual(sut, exceptedResult)
     }
     
+    @available(iOS 11.0, *)
     func testEndEditingGestureShouldNotCancelTouchesInView() {
         viewController.endEditingByTap()
         XCTAssertNotNil(viewController.view.gestureRecognizers)
