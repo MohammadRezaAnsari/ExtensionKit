@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  UIStackView+RemoveAllArrangedSubviews.swift
 //  
 //
 //  Created by Mattin on 10/17/21.
