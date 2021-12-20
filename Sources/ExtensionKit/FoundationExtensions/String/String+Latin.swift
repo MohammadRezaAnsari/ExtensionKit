@@ -11,6 +11,7 @@ public extension String {
     
    /// Perform string transliteration to latin.
     var latin: Self {
-        self.applyingTransform(StringTransform.toLatin, reverse: false) ?? self
-    }
+        let latin = self.applyingTransform(StringTransform.toLatin, reverse: false) ?? self
+        return latin.applyingTransform(StringTransform.stripDiacritics, reverse: false) ?? self
+    }    
 }
