@@ -9,7 +9,7 @@ import UIKit
 
 extension UIImage {
     
-    func fixedOrientationToUp() -> UIImage? {
+    public func fixedOrientationToUp() -> UIImage? {
         
         guard imageOrientation != UIImage.Orientation.up else {
             // This is default orientation, don't need to do anything
