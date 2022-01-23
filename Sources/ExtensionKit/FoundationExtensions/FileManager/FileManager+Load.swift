@@ -28,7 +28,6 @@ public extension FileManager {
         let fileURL = directoryPath.appendingPathComponent(name)
         
         guard let image = UIImage(contentsOfFile: fileURL.path) else {
-            assertionFailure("ForDebug: can not find image with given name.")
             return nil
         }
         
