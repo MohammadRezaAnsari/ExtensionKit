@@ -15,7 +15,7 @@ public extension String {
         paragraphStyle.lineSpacing = spacing
         attributedString.addAttribute(.paragraphStyle,
                                       value: paragraphStyle,
-                                      range: NSRange(location: 0, length: self.count))
+                                      range: NSRange(location: 0, length: self.utf16.count))
         return NSAttributedString(attributedString: attributedString)
     }
 }
